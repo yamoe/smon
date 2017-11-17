@@ -38,6 +38,7 @@ RUN apt-get update && apt-get install -y \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ```
 \> docker build -t dev_smon .
+
 \> docker run -it -p 1980:1980 --name dev_smon dev_smon:latest
 
 
