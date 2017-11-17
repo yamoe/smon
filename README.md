@@ -1,6 +1,6 @@
 
 # SMON
-Self-Monitoring : simple monitoringn web server
+Self-Monitoring
 <img src="https://github.com/yamoe/smon/raw/master/smon.jpg">
 
 ## How to run
@@ -53,7 +53,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
   * spring boot 1.5.7.RELEASE
 * smon_native (os monitoring library)
   * JNI
-  * c++(pdh)
+  * c++(pdh, /proc/)
 
 ### IDE
 * Spring Tool Suite(STS) 3.9.1.RELEASE
