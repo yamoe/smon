@@ -29,10 +29,6 @@ task deploy {
 			into dir + '/deploy/'
 		}
    	copy {
-			from dir + '/smon_native/native/bin/*.dll'
-			into dir + '/deploy/'
-		}
-   	copy {
 			from(dir + '/smon_native/native/bin/') {
 				include '*.so'
 				include '*.dll'

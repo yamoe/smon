@@ -1,10 +1,11 @@
 
 # SMON
 Self-Monitoring : simple monitoringn web server
+<img src="https://github.com/yamoe/smon/raw/master/smon.jpg">
 
 ## How to run
 1. install java 8 (64bit)
-1. download release
+1. [download release](https://github.com/yamoe/smon/files/1460890/deploy.zip)
 1. ./run_smon
 1. open http://localhost:1980 in chrome, edge(not IE), firefox, opera
 
