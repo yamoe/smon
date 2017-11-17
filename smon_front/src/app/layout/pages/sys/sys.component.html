@@ -1,0 +1,43 @@
+<form>
+    <section class="form-block">
+        <label>System Information</label>
+        <div class="form-group" *ngIf="data?.utc">
+            <label>Time</label>
+            <span>{{ queryTime() }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.hostName">
+            <label>Host Name</label>
+            <span>{{ data.hostName }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.osName">
+            <label>OS Name</label>
+            <span>{{ data.osName }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.processor">
+            <label>Processor</label>
+            <span>{{ data.processor }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.baseboard">
+            <label>Base Board</label>
+            <span>{{ data.baseboard }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.ram">
+            <label>RAM</label>
+            <span>{{ data.ram }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.disk">
+            <label>Disk</label>
+            <span>{{ data.disk }}</span>
+        </div>
+        <div class="form-group" *ngIf="data?.ip">
+            <label>IP</label>
+            <span>{{ data.ip }}</span>
+        </div>
+        <div class="form-group">
+            <label>
+                <button (click)="query(); $event.preventDefault()" class="btn btn-primary">Refresh</button>
+            </label>
+            <span></span>
+        </div>
+    </section>
+</form>

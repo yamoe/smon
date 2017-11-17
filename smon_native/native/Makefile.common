@@ -1,0 +1,6 @@
+
+CXX = g++
+CXXFLAGS = -g -O0 -W -Wall -std=c++11 -pthread 
+#CXXFLAGS = -O2 -DNDEBUG -std=c++11 -pthread -I -Wno-unused
+LDFLAGS =  -lrt -ldl
+

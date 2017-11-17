@@ -1,0 +1,30 @@
+
+<div class="row">
+    <br *ngFor="let i of topMargins"/>
+</div>
+<div class="row" *ngIf="titleFormatting() || showCloseButton">
+    <div class="col-md-12">
+        <span *ngIf="titleFormatting()" [innerHTML]="titleFormatting()">
+        </span>
+        <span *ngIf="showCloseButton && titleFormatting()" style="bottom:10px;right:0;position:absolute;">
+            <button type="button" class="btn btn-sm btn-icon" (click)="close()">
+                <clr-icon shape="window-close"></clr-icon>
+            </button>
+        </span>
+        <span *ngIf="showCloseButton && !titleFormatting()">
+            <button type="button" class="btn btn-sm btn-icon" (click)="close()">
+                <clr-icon shape="window-close"></clr-icon>
+            </button>
+        </span>
+
+        <hr *ngIf="showTitleHRTag"/>
+    </div>
+</div>
+<div class="row" *ngFor="let i of rowNum" #rows>
+    <div [ngClass]="columnStyle" *ngFor="let j of colNum">
+        <ng-template #dynamic></ng-template>
+    </div>
+</div>
+<div class="row">
+    <br *ngFor="let i of bottomMargins"/>
+</div>

@@ -1,0 +1,36 @@
+<clr-main-container>
+    <app-header-alert></app-header-alert>
+    <app-header></app-header>
+    <div class="content-container">
+        <div class="content-area">
+            <router-outlet></router-outlet>
+        </div>
+        <clr-vertical-nav [clr-nav-level]="1" [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+            <a clrVerticalNavLink routerLink="/cpu" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="cpu"></clr-icon>
+                CPU
+            </a>
+            <a clrVerticalNavLink routerLink="/disk" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="hard-disk"></clr-icon>
+                Disk
+            </a>
+            <a clrVerticalNavLink routerLink="/mem" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="memory"></clr-icon>
+                Memory
+            </a>
+            <a clrVerticalNavLink routerLink="/net" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="network-switch"></clr-icon>
+                Network
+            </a>
+            <a clrVerticalNavLink routerLink="/proc" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="application"></clr-icon>
+                Proccess
+            </a>
+            <a clrVerticalNavLink routerLink="/sys" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="host"></clr-icon>
+                System
+            </a>
+        </clr-vertical-nav>
+
+    </div>
+</clr-main-container>

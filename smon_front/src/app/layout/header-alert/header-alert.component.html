@@ -1,0 +1,18 @@
+<div class="alert alert-app-level alert-danger" [hidden]="!show">
+    <div class="alert-items">
+        <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+                <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+            </div>
+            <div class="alert-text">
+                ERROR : Disconnected from Server. Please refresh the page.
+            </div>
+            <div class="alert-actions">
+                <button class="btn alert-action" (click)="refresh()">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="close" aria-label="Close">
+        <clr-icon aria-hidden="true" shape="close" (click)="close()"></clr-icon>
+    </button>
+</div>

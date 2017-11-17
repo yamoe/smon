@@ -1,0 +1,56 @@
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '4.2.1'
+}
+
+
+task build {
+	evaluationDependsOnChildren()
+    dependsOn subprojects.build
+    doLast {
+    	deploy.execute()
+    	println '[yukul-ky] complete smon !!!'
+    }
+}
+
+
+task deploy {
+	final def dir = project.projectDir.toString()	
+	doLast {
+		new File('deploy').deleteDir()
+   	copy {
+			from dir + '/smon_front/dist'
+			into dir + '/deploy/public'
+		}
+   	copy {
+			from(dir + '/smon_server/build/libs/') {
+				 include 'smon_server*.jar'
+			}
+			into dir + '/deploy/'
+		}
+   	copy {
+			from dir + '/smon_native/native/bin/*.dll'
+			into dir + '/deploy/'
+		}
+   	copy {
+			from(dir + '/smon_native/native/bin/') {
+				include '*.so'
+				include '*.dll'
+			}
+			into dir + '/deploy/'
+		}
+   	copy {
+			from(dir + '/script/') {
+				include '*'
+			}
+			into dir + '/deploy/'
+		}
+	}
+}
+
+
+project(':smon_server') {
+	dependencies {
+		compile project(':smon_native')
+	}
+}

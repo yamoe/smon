@@ -1,0 +1,16 @@
+
+smon_front/dist
+smon_front/node
+smon_front/node_modules
+npm-debug.log.*
+
+.gradle
+.settings
+.classpath
+.project
+bin
+build
+dist
+deploy
+Debug
+

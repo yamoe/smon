@@ -1,0 +1,39 @@
+<div class="card">
+        <div class="card-block">
+        <b>{{config.name}} {{config.description}}</b>
+    </div>
+    <div class="card-img" [ngStyle]="config.getHeight()">
+        <ngx-charts-area-chart
+            [view]="config.view"
+            [results]="config.data"
+            [scheme]="config.scheme"
+            [animations]=false
+            [legend]=false
+            [legendTitle]=''
+            [xAxis]=false
+            [yAxis]=true
+            [showGridLines]=true
+            [roundDomains]=false
+            [showXAxisLabel]=false
+            [showYAxisLabel]=false
+            [xAxisLabel]=''
+            [yAxisLabel]=''
+            [xAxisTickFormatting]=''
+            [yAxisTickFormatting]="config.yAxisTickFormatting"
+            [timeline]=false
+            [autoScale]=false
+            [gradient]=false
+            [yScaleMin]="config.yScaleMin"
+            [yScaleMax]="config.yScaleMax"
+        >
+            <ng-template #tooltipTemplate let-model="model">
+                <div align="left" [innerHTML]="config.getTooltipText(model.name)">
+                </div>
+            </ng-template>
+            <ng-template #seriesTooltipTemplate let-model="model">
+                <div align="left" [innerHTML]="config.getTooltipText(model[0].name)">
+                </div>
+            </ng-template>
+        </ngx-charts-area-chart>
+    </div>
+</div>

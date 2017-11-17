@@ -1,0 +1,42 @@
+
+plugins {
+	id "com.moowork.node" version "1.2.0"
+}
+
+node {
+	version = '6.11.3'
+	npmVersion = '3.10.10'
+	download = true
+	workDir = file("${project.projectDir}/node/node")
+	npmWorkDir = file("${project.projectDir}/node/npm")
+	nodeModulesDir = file("${project.projectDir}")
+}
+
+task start() {}
+start.dependsOn(npm_install)
+start.dependsOn(npm_run_start)
+
+task test {}
+test.dependsOn(npm_install)
+test.dependsOn(npm_run_test)
+
+task build {}
+build.dependsOn(npm_install)
+build.dependsOn(npm_run_build)
+
+
+task npm_clean(type: Delete) {
+	final def webDir = "${project.projectDir}"
+	//delete "${webDir}/node_modules"
+	delete "${webDir}/dist"
+}
+
+task clean {}
+clean.dependsOn(npm_clean)
+
+
+
+tasks.build.doLast(){
+	println '[yukul-ky] complete smon client!!!'  
+}
+

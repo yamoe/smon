@@ -1,0 +1,16 @@
+<clr-header class="header-6">
+    <div class="branding">
+        <a href="" class="nav-link" onclick="return false;">
+            <clr-icon shape="happy-face"></clr-icon>
+            <span class="title">SMON</span>
+        </a>
+    </div>
+
+    <div class="header-nav">
+        <span class="nav-link nav-text" (click)="query()">
+            <span *ngIf="data?.hostName">{{ data.hostName }}</span>
+            <span *ngIf="data?.ip"> : {{ data.ip }}</span>
+        </span>
+    </div>
+
+</clr-header>

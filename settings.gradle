@@ -1,0 +1,4 @@
+
+include 'smon_front', 'smon_native', 'smon_server'
+rootProject.name = 'smon'
+

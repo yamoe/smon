@@ -1,0 +1,8 @@
+#!/bin/sh
+
+current_dir=$(dirname $(readlink -f "$0"))
+export LD_LIBRARY_PATH=${current_dir}
+
+java -jar smon_server-*.jar
+
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="smon">
+      <UniqueIdentifier>{2dae518b-d6b9-4338-871a-d836a3328bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smon\mon">
+      <UniqueIdentifier>{4cd40db0-59ed-4d72-a65c-0d4afec861d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smon\mon\win">
+      <UniqueIdentifier>{7a639cdc-a969-4ed5-9538-e7e813035257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smon\mon\linux">
+      <UniqueIdentifier>{f5174277-31bf-497d-9ad2-0dc3a96fc068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smon\jni">
+      <UniqueIdentifier>{9fab4d73-ab6c-4e2e-b25a-add84a904068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="smon\util">
+      <UniqueIdentifier>{347375e6-1aa1-42a7-92fc-2512c80f37f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\smon\jni\jni.cpp">
+      <Filter>smon\jni</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\smon\api.h">
+      <Filter>smon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\interface.h">
+      <Filter>smon\mon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\mem.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\net.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\proc.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\sys.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\timer.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\cpu.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\disk.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\mem.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\net.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\pdh.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\proc.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\sys.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\timer.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\cpu.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\disk.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\smon.h">
+      <Filter>smon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\reg.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\win_util.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\net_stat.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\manager.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\linux\manager.h">
+      <Filter>smon\mon\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\data.h">
+      <Filter>smon\mon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\util\char_array.h">
+      <Filter>smon\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\util\stack_trace.h">
+      <Filter>smon\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\util\util.h">
+      <Filter>smon\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\util\log.h">
+      <Filter>smon\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\jni\env_wrapper.h">
+      <Filter>smon\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\jni\callbacker.h">
+      <Filter>smon\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\jni\data.h">
+      <Filter>smon\jni</Filter>
+    </ClInclude>
+    <ClInclude Include="include\smon\mon\win\proc_list.h">
+      <Filter>smon\mon\win</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

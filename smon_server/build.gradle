@@ -1,0 +1,50 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'server.smon'
+version = '0.0.1'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-websocket')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+}
+
+tasks.build.doLast(){
+	println '[yukul-ky] complete smon_server !!!'  
+}
+
+test {
+	final def dir = project.projectDir.toString() + '/../smon_native/native/bin' 
+	systemProperty 'java.library.path', dir
+	useTestNG() {
+		environment 'LD_LIBRARY_PATH', dir
+	}
+}
+
+bootRun {
+	// on linux, must add LD_LIBRARY_PATH before run 'gradle booRun'
+	// ex. export LD_LIBRARY_PATH=/home/user/smon/smon_native/native/bin
+	final def dir = project.projectDir.toString() + '/../smon_native/native/bin'
+	systemProperty 'java.library.path', dir
+}
+
+//check.dependsOn.remove(test);
